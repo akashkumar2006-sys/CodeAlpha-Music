@@ -1,0 +1,432 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#1d2671,#c33764);
+    padding:20px;
+}
+
+/* ==========================
+   PLAYER
+========================== */
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.player{
+
+    width:380px;
+    max-width:100%;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.header{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+.header h2{
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+/* ==========================
+   COVER IMAGE
+========================== */
+
+.cover{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:20px;
+
+}
+
+.cover img{
+
+    width:240px;
+
+    height:240px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+
+    transition:.4s;
+
+}
+
+.cover img.playing{
+
+    animation:rotateAlbum 8s linear infinite;
+
+}
+
+@keyframes rotateAlbum{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* ==========================
+   SONG INFO
+========================== */
+
+.song-info{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+.song-info h3{
+
+    color:white;
+
+    font-size:22px;
+
+}
+
+.song-info p{
+
+    color:#ddd;
+
+    margin-top:5px;
+
+}
+
+/* ==========================
+   PROGRESS BAR
+========================== */
+
+.progress-container{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+}
+
+.progress-container span{
+
+    color:white;
+
+    font-size:13px;
+
+    width:42px;
+
+}
+
+.progress-bar{
+
+    flex:1;
+
+    height:8px;
+
+    background:rgba(255,255,255,.25);
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+}
+
+#progress{
+
+    width:0;
+
+    height:100%;
+
+    background:#00e5ff;
+
+    border-radius:10px;
+
+}
+
+/* ==========================
+   CONTROLS
+========================== */
+
+.controls{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-bottom:18px;
+
+}
+
+.controls button{
+
+    width:65px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    color:white;
+
+    background:rgba(255,255,255,.15);
+
+    transition:.3s;
+
+}
+
+.controls button:hover{
+
+    transform:scale(1.1);
+
+    box-shadow:0 0 18px cyan;
+
+}
+
+#play{
+
+    background:#00c853;
+
+}
+
+/* ==========================
+   EXTRA CONTROLS
+========================== */
+
+.extra-controls{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+.extra-controls button{
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:rgba(255,255,255,.15);
+
+    transition:.3s;
+
+}
+
+.extra-controls button:hover{
+
+    box-shadow:0 0 15px cyan;
+
+}
+
+/* ==========================
+   VOLUME
+========================== */
+
+.volume{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+}
+
+.volume i{
+
+    color:white;
+
+}
+
+.volume input{
+
+    width:100%;
+
+}
+
+/* ==========================
+   PLAYLIST
+========================== */
+
+.playlist{
+
+    background:rgba(255,255,255,.10);
+
+    padding:15px;
+
+    border-radius:15px;
+
+}
+
+.playlist h3{
+
+    color:white;
+
+    margin-bottom:10px;
+
+}
+
+.playlist ul{
+
+    list-style:none;
+
+    max-height:180px;
+
+    overflow-y:auto;
+
+}
+
+.playlist li{
+
+    color:white;
+
+    padding:10px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.playlist li:hover{
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.playlist li.active{
+
+    background:#00c853;
+
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ffffff66;
+
+    border-radius:10px;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:480px){
+
+.player{
+
+    padding:18px;
+
+}
+
+.cover img{
+
+    width:200px;
+
+    height:200px;
+
+}
+
+.controls button{
+
+    width:58px;
+
+    height:58px;
+
+}
+
+.song-info h3{
+
+    font-size:20px;
+
+}
+
+}
