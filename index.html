@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="player">
+
+        <!-- Header -->
+        <div class="header">
+            <h2>🎵 Music Player</h2>
+        </div>
+
+        <!-- Album Cover -->
+        <div class="cover">
+            <img id="cover" src="images/cover1.jpg" alt="Album Cover">
+        </div>
+
+        <!-- Song Info -->
+        <div class="song-info">
+            <h3 id="title">Song Title</h3>
+            <p id="artist">Artist Name</p>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-container" id="progressContainer">
+
+            <span id="currentTime">0:00</span>
+
+            <div class="progress-bar">
+
+                <div id="progress"></div>
+
+            </div>
+
+            <span id="duration">0:00</span>
+
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+
+            <button id="prev">
+                <i class="fas fa-backward"></i>
+            </button>
+
+            <button id="play">
+                <i class="fas fa-play"></i>
+            </button>
+
+            <button id="next">
+                <i class="fas fa-forward"></i>
+            </button>
+
+        </div>
+
+        <!-- Extra Controls -->
+        <div class="extra-controls">
+
+            <button id="shuffle">
+                <i class="fas fa-random"></i>
+            </button>
+
+            <button id="repeat">
+                <i class="fas fa-redo"></i>
+            </button>
+
+        </div>
+
+        <!-- Volume -->
+        <div class="volume">
+
+            <i class="fas fa-volume-up"></i>
+
+            <input
+            type="range"
+            id="volume"
+            min="0"
+            max="1"
+            step="0.01"
+            value="1">
+
+        </div>
+
+        <!-- Playlist -->
+        <div class="playlist">
+
+            <h3>Playlist</h3>
+
+            <ul id="playlist">
+
+                <li data-index="0">🎵 Song One</li>
+
+                <li data-index="1">🎵 Song Two</li>
+
+                <li data-index="2">🎵 Song Three</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Audio -->
+<audio id="audio"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
